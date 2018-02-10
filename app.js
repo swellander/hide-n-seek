@@ -1,6 +1,9 @@
-var qr = require('qr-image');
+var express = require('express');
+var app = express();
 
-var qr_svg = qr.image('hey there WHOOOOOOOO!', { type: 'svg' });
-qr_svg.pipe(require('fs').createWriteStream('i_love_qr.svg'));
+app.get('/', function(req, res) {
+    res.send('HEYYYYYYY');
+})
 
-var svg_string = qr.imageSync('I love QR!', { type: 'svg' });
+app.listen(3000);
+console.log('Server started on port 3000');
