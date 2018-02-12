@@ -1,3 +1,7 @@
+<head>
+
+</head>
+
 <body>
   <h1>QR Code Generator</h1>
 
@@ -5,8 +9,17 @@
   <hr>
   <br>
 
-  <form action="">
-    <label for="">Text for your QR code to pull up</label>
-    <input type="text">
+  <form id="qr-form"action="/" method="post">
+    <label for="">URL for your QR code to pull up: </label>
+    <input id="qr-url" type="text" name="qr_url">
+    <label for="">A name for your QR code: </label>
+    <input id="qr-name" type="text" name="qr_name">
+    <button type="submit">Generate!</button> 
   </form>
+
+
+
+  <script src="js/qr-interface.js"></script>
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+
 </body>
